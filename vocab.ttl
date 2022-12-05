@@ -1,0 +1,82 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix o: <http://omeka.org/s/vocabs/o#> .
+@prefix RDF: <https://relation-entre-chercheur.com/Relation#> .
+@prefix ma: <http://www.w3.org/ns/ma-ont#>.
+
+<https://relation-entre-chercheur.com/Relation#> a owl:Ontology ;
+    dcterms:title "Relation chercheur" .
+
+
+#################### Chercheur ####################
+Relation:Chercheur a rdfs:Class ;
+    rdfs:label "Chercheur" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Relation:nom a rdf:Property ;
+    rdfs:label "nom" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Relation:prenom a rdf:Property ;
+    rdfs:label "prenom" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Relation:email a rdf:Property ;
+    rdfs:label "email" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Relation:numero_de_telephone a rdf:Property ;
+    rdfs:label "numero_de_telephone" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+#################### Laboratoire ####################
+
+Relation:Laboratoire a rdfs:Class ;
+    rdfs:label "Laboratoire" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Relation:numero_lab a rdf:Property ;
+    rdfs:label "id_lab" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Relation:nom_lab a rdf:Property ;
+    rdfs:label "nom_lab" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Relation:addresse_lab a rdf:Property ;
+    rdfs:label "addresse_lab" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+    
+#####################   Publication  ###############
+
+Relation:Publication a rdfs:Class ;
+    rdfs:label "Publication" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Relation:title_publication a rdf:Property ;
+    rdfs:label "title_publication" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Relation:date_publication a rdf:Property ;
+    rdfs:label "date_publication" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Relation:domaine a rdf:Property ;
+    rdfs:label "domaine" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
