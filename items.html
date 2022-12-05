@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Items list</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+    <table border>
+        <td>
+            id
+        </td>
+        <td>
+            id element
+        </td>
+        <td>
+            media
+        </td>
+        <td>
+             type 
+        </td>
+    </table>
+    <div id="main"></div>
+</body>
+<script>
+    d3.json("items.json").then(function (data) {
+        console.log(data);
+        d3.select("#main")
+            .selectAll("div")
+            .data(data)
+            .enter()
+            .append("div")
+            .attr("id", (d, i) => "id" + i)
+            .html(
+                (d, i) => " <table border><td>" + i + " <//td><td>"  + d["o:id"] + " <//td><td>" + d["dcterms:title"][0]["@value"] + " <//td><td><img src='" + d["o:media"][0]["@id"].toString() + "'><//td><td>"+ d["@type"].toString().split(':')[2] + " <//td> <//table>"
+            );
+    });
+</script>
+
+</html>
